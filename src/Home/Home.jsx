@@ -14,7 +14,7 @@ const HomePage = () => {
     const fetchCountries = async () => {
       try {
         const response = await fetch(
-          "https://calendarific.com/api/v2/countries?api_key=DRt8x1HwgnBRyWnSBh218vghkuNYgjfj"
+          `https://calendarific.com/api/v2/countries?api_key=${process.env.REACT_APP_API_KEY}`
         );
         const data = await response.json();
         if (data.meta.code === 200) {
@@ -29,6 +29,7 @@ const HomePage = () => {
     };
     fetchCountries();
   }, []);
+  
 
   const handleCountryChange = (e) => {
     const selectedIso = e.target.value;
