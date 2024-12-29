@@ -22,3 +22,4 @@ Clone the front-end repository to your local machine.
 
 - npm install
 - npm start
+- add .env and set up api Key for third party API
